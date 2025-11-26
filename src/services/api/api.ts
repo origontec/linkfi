@@ -4,6 +4,7 @@ import {CharacterApi} from "./collections/character-api";
 import {loadAuthToken} from "../../utils/auth/auth";
 import {AuthApi} from "./collections/auth-api";
 import {RootStore} from "../../models";
+import { PeopleApi } from "./collections/people-api";
 
 /**
  * Manages all requests to the API.
@@ -101,5 +102,9 @@ export class Api {
 
     get auth() {
         return new AuthApi(this)
+    }
+
+    get people() {
+        return new PeopleApi()
     }
 }

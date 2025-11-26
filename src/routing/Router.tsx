@@ -21,6 +21,7 @@ import Moralis from "moralis";
 import {EvmChain} from "@moralisweb3/common-evm-utils";
 import axios from "axios";
 import {useAccount} from "wagmi";
+import { PeopleScreen } from "../screens/people/people-screen";
 
 export const paths = getPaths();
 
@@ -125,6 +126,8 @@ function Main() {
                                 <Route path="/profile" element={<ProfileScreen trendData={trendTagData}
                                                                                accountData={trendAccountData}/>}/>
                                 <Route path="/test" element={<TestScreen/>}/>
+                                
+                                <Route path="/people" element={<PeopleScreen/>}/>
                             </Routes>
                         </AnimatePresence>
                     </Grid>
